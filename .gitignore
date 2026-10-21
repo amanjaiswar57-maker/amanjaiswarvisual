@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large video assets (>100MB blocked by GitHub)
+# Keep them local or host on CDN/Vimeo/Cloudinary
+*.mp4
+*.MP4
