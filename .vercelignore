@@ -1,0 +1,9 @@
+# Tell Vercel to ignore server.js so it doesn't create a Serverless Node Function
+server.js
+
+# Ignore heavy video assets on Vercel deployment
+*.mp4
+*.MP4
+
+# Ignore local environment and git
+.git
