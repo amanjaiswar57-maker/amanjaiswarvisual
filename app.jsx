@@ -455,7 +455,7 @@ const SelectedWork = () => {
       category: "Short Film", 
       role: "Cinematography, Video Editing, Color Grading, Directing", 
       year: "2026", 
-      video: "./project2.MP4", 
+      video: "./project2.mp4", 
       poster: "./project2-thumbnail.jpeg",
       aspect: "landscape",
       formatLabel: "16:9 Narrative Short",

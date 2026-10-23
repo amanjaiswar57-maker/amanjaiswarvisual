@@ -119,7 +119,9 @@ const server = http.createServer((req, res) => {
       'Content-Range': `bytes ${start}-${end}/${totalSize}`,
       'Accept-Ranges': 'bytes',
       'Content-Length': chunkSize,
-      'Content-Type': contentType
+      'Content-Type': contentType,
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Last-Modified': stat.mtime.toUTCString()
     });
 
     stream.pipe(res);
@@ -132,7 +134,8 @@ const server = http.createServer((req, res) => {
       'Content-Length': totalSize,
       'Content-Type': contentType,
       'Accept-Ranges': 'bytes',
-      'Cache-Control': 'no-cache'
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Last-Modified': stat.mtime.toUTCString()
     });
 
     const stream = fs.createReadStream(actualPath);
